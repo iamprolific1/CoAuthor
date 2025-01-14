@@ -1,0 +1,75 @@
+:root {
+    --primary-color: #2575FC;
+    --secondary-color: #23C4A6;
+    --bg-color: #F5F7FA;
+    --text-primary: #333333;
+    --section-color: #FFFFFF;
+    --text-secondary: #666666;
+    --border-color: #D9DDE3;
+    --error-color: #FF6B6B;
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+    --info-color: #2196F3;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.auth-btns  {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.auth-btns .login-btn {
+    color: #2575fc;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.auth-btns .signup-btn {
+    background: #2575fc;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
