@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "../pages/Home";
+import LandingPage from "../pages/pre_landing_page/Home";
 enum RoutePaths {
-    Home = '/'
+  Home = "/",
 }
-export const PageRoutes = ()=> {
-    return(
-        <>
-            <Routes>
-                <Route path={RoutePaths.Home} element={<LandingPage />} />
-            </Routes>
-        </>
-    );
-}
+export const PageRoutes = () => {
+  return (
+    <>
+      <Routes>
+        <Route path={RoutePaths.Home} element={<LandingPage />} />
+      </Routes>
+    </>
+  );
+};
