@@ -27,8 +27,8 @@ export const NavBar: React.FC = ()=> {
                     </nav>
 
                     <div className={`${styles['auth-btns']} ${isMenuOpen ? styles.open : ""}`}>
-                        <Link to="#login" className={styles["login-btn"]}>Login</Link>
-                        <Link to="#register" className={styles["signup-btn"]}>Get Started</Link>
+                        <Link to="/login" className={styles["login-btn"]}>Login</Link>
+                        <Link to="/signup" className={styles["signup-btn"]}>Get Started</Link>
                     </div>
                 </div>
 
