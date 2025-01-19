@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import Button from "react-bootstrap/Button";
 
 export const NavBar: React.FC = ()=> {
-
+    // const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     const toggleMenu = ()=> {

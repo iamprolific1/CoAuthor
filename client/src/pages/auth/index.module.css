@@ -139,6 +139,8 @@ input::placeholder {
     justify-content: center;
     gap: 10px;
     transition: background 0.3s ease;
+    outline: none;
+    border: none;
 }
 
 .switchAuth {
@@ -150,6 +152,10 @@ input::placeholder {
     justify-content: center;
     text-align: center;
 
+}
+
+.switchAuth span {
+    color: white;
 }
 
 .switchAuth span a {

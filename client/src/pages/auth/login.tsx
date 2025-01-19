@@ -37,7 +37,7 @@ const Login: React.FC = ()=> {
                                     </button>
                                 </div>
                                 <div className={styles.switchAuth}>
-                                    <span>Forgot Password?</span>
+                                    <span><Link to="/forgot_password">Forgot Password?</Link></span>
                                     <p>New here? <span><Link to="/signup">Sign Up</Link></span></p>
                                 </div>
                         </form>
