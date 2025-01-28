@@ -75,7 +75,6 @@ const ActivityChart: React.FC = ()=> {
             y: {
                 grid: {
                     color: "rgba(200, 200, 200, 0.3)",
-                    borderDash: [5, 5],
                 },
                 ticks: {
                     color: "#666",

@@ -15,6 +15,7 @@ import OrderedList from "@tiptap/extension-ordered-list";
 
 
 import { Menu, MenuItem, styled, Select, FormControl } from "@mui/material";
+import { SelectChangeEvent } from "@mui/material";
 import {
     Bold as BoldIcon,
     Italic as ItalicIcon,
@@ -91,7 +92,7 @@ const TextEditorPage = ()=> {
 
     const open = Boolean(anchorEl);
 
-    const handleHeadingChange = (event: React.ChangeEvent<{ value: unknown }>)=> {
+    const handleHeadingChange = (event: SelectChangeEvent<unknown>)=> {
         const selectedStyle = event.target.value as string;
         setHeadingStyle(selectedStyle);
     };
@@ -348,7 +349,7 @@ const TextEditorPage = ()=> {
                                 <StyledSelectField
                                     labelId="heading-select-label"
                                     value={headingStyle}
-                                    onChange={(e)=>handleHeadingChange(e)}
+                                    onChange={handleHeadingChange}
                                     
                                     sx={{
                                         background: 'white',
