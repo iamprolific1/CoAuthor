@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #2575FC;
+    --secondary-color: #23C4A6;
+    --bg-color: #F5F7FA;
+    --text-primary: #333333;
+    --section-color: #FFFFFF;
+    --text-secondary: #666666;
+    --border-color: #D9DDE3;
+    --border-color-2: #e2e8f0;
+    --error-color: #FF6B6B;
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+    --info-color: #2196F3;
+    --primary-text-color: #1a202c;
+    --primary-hover-color: #2563eb;
+    --icon-color: #4a5568;
+    --editor-shadow: rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Big Shoulders Text", serif;
+}
+
+.editorPage {
+    height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.editorPage::-webkit-scrollbar {
+    width: 5px;
+}
+
+.editorPage:-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.editorPage::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+.toolbarContainer {
+    width: 100%;
+    background: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    height: 120px;
+    padding: 1rem;
+}
+
+.pasteContainer {
+    width: 150px;
+    /* border: 1px solid green; */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pasteIcon {
+    width: 2.3rem;
+    height: 2.3rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.pasteIcon:hover {
+    color: var(--primary-color);
+}
+
+.pasteContainer span {
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+
+}
+
+.toolbar {
+    /* width: 95%;
+    margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.toolbarMainButtons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.toolbarButton {
+    text-transform: capitalize;
+    /* font-weight: 500; */
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    
+}
+
+.toolbarButton:hover {
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
+
+
+.fontSelector {
+    border: 1px solid var(--border-color-2);
+    outline: none;
+    padding: 7px;
+    background: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    outline: none;
+    width: 180px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.fontSelector:hover {
+    border-color: var(--primary-color);
+}
+
+.fontSizes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.fontSizeSelector {
+    padding: 7px;
+    border: 1px solid var(--border-color-2);
+    outline: none;
+    background: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.toolbarOptions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.options {
+    display: flex;
+    gap: 12px;
+}
+
+.optionButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.optionButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+    color: var(--primary-color);
+}
+
+
+.activeButton {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.exportButton {
+    background: var(--warning-color);
+}
+
+.exportButton:hover {
+    background: var(--warning-color);
+    color: white;
+}
+
+.icon {
+    font-size: 14px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.activeButtonIcon {
+    font-size: 14px;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.optionButton span {
+    color: white;
+}
+
+.optionButton:hover .icon, .optionButton:hover span {
+    color: var(--primary-hover-color);
+}
+
+.editorWrapper {
+    display: flex;
+    height: 100vh;
+    margin-top: 120px;
+}
+
+.sideBar {
+    width: 300px;
+    background: #333;
+    padding: 20px;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    color: #fff;
+    position: fixed;
+    height: 100vh;
+    z-index: 20;
+    top: 120px;
+    left: 0;
+}
+
+.editorContainer {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1rem;
+    background: #f5f5f5;
+    position: relative;
+    max-height: 100vh;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.editorContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.editorContainer::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.editorContainer::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}

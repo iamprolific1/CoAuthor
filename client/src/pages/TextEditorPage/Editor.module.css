@@ -1,0 +1,185 @@
+:global(.ProseMirror) {
+    padding: 2rem;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.2;
+    color: #333;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    min-height: calc(100vh - 2rem); 
+    max-width: 794px;
+    margin: 2rem auto;
+    border: 1px solid #ddd;
+}
+
+:global(.ProseMirror p){
+    margin: 0 0 1rem;
+    font-size: 1rem;
+}
+
+:global(.ProseMirror h1) {
+    font-size: 2rem;
+    margin: 1.5rem 0 0.5rem;
+    font-weight: bold;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+:global(.ProseMirror h2) {
+    font-size: 1.75rem;
+    margin: 1.25rem 0 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+:global(.ProseMirror h3) {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+:global(.ProseMirror blockquote) {
+    font-style: italic;
+    color: #555;
+    margin: 1rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid #ddd;
+}
+
+:global(.ProseMirror ul) {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    list-style: disc;
+}
+
+:global(.ProseMirror ol) {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    list-style: decimal;
+}
+
+:global(.ProseMirror u) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 1px;
+    text-decoration-color: linear-gradient(to right, #2575FC, #6A82FB);
+}
+:global(.ProseMirror s) {
+    text-decoration: line-through;
+    color: #333;
+    text-decoration-color: #333;
+    text-decoration-thickness: 1px;
+}
+
+:global(.ProseMirror u:hover) {
+    text-decoration-color: #2575FC;
+}
+
+:global(.ProseMirror li) {
+    margin-bottom: 0.5rem;
+}
+
+:global(.ProseMirror a) {
+    color: #2575fc;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+:global(.ProseMirror a:hover) {
+    color: #1d63d9;
+}
+
+:global(.ProseMirror img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+    display: block;
+}
+
+:global(.ProseMirror pre) {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+}
+
+:global(.ProseMirror code) {
+    background: #f0f0f0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+:global(.ProseMirror table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+:global(.ProseMirror th, .ProseMirror td) {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+:global(.ProseMirror th) {
+    background: #f9f9f9;
+    font-weight: bold;
+}
+
+:global(.ProseMirror hr) {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 2rem 0;
+}
+
+:global(.ProseMirror:focus) {
+    border: 1px solid #2575fc;
+    box-shadow: 0 0 0 4px rgba(37, 117, 252, 0.2);
+}
+
+:global(.ProseMirror .CodeMirror-line::selection) {
+    background: #2575fc;
+}
+
+:global(.ProseMirror .CodeMirror-line::before) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, rgba(37, 117, 252, 0) 0%, rgba(37, 117, 252, 1) 100%);
+}
+
+:global(.ProseMirror .CodeMirror-line::after) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, rgba(37, 117, 252, 1) 0%, rgba(37, 117, 252, 0) 100%);
+}
+
+:global(.ProseMirror .cm-keyword) {
+    color: #0086b3;
+}
+
+:global(.ProseMirror p.is-empty::before) {
+    content: attr(data-placeholder);
+    color: #bbb;
+    font-style: italic;
+    pointer-events: none;
+    display: block;
+}
