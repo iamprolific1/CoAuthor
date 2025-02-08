@@ -1,14 +1,11 @@
 :global(.ProseMirror) {
     padding: 2rem;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.2;
     color: #333;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     outline: none;
-    min-height: calc(100vh - 2rem); 
+    min-height: 1123px; 
     max-width: 794px;
     margin: 2rem auto;
     border: 1px solid #ddd;
@@ -16,7 +13,6 @@
 
 :global(.ProseMirror p){
     margin: 0 0 1rem;
-    font-size: 1rem;
 }
 
 :global(.ProseMirror h1) {

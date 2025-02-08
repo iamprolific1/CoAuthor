@@ -19,379 +19,378 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .editorPage {
-    display: grid;
-    grid-template-columns: 300px auto;
+    width: 100%;
     height: 100vh;
-    background: #f9f9f9;
+    background: white;
+    display: flex;
+    flex-direction: column;
     
 }
-.editorSidebar {
-    background: #333;
-    padding: 20px;
-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    color: #fff;
+
+.editorHeader {
+    background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    height: 120px;
 }
-.editorSidebar h3 {
-    color: var(--primary-color);
-    font-size: 1.4rem;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: bold;
-}
-.editorSidebar h4 {
-    color: var(--secondary-color);
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.presenceSection .user {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    color: #333;
-}
-.commentsSection {
+
+.topHeaderNav {
     width: 100%;
-    height: 300px;
-    overflow-y: auto;
+    padding: 6px;
+    display: grid;
+    grid-template-columns: 5% 95%;
 }
-.commentsSection .comment {
-    background: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-}
-.comment .commentHeader {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-.commentHeader .avatar {
-    font-size: 12px;
-    font-weight: bold;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--secondary-color);
-    color: #fff;
+
+.headerIcon {
+    /* border: 1px solid green; */
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    
 }
 
-.comment .author {
-    font-size: 15px;
-    font-weight: 500;
+.headerIcon .icon {
+    color: var(--primary-color);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.primaryToolbar {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.primaryTools .top{
+    /* width: 100%; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.documentNameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.documentName {
+    font-size: 17px;
+    font-weight: bold;
     color: var(--text-primary);
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    width: 220px;
 }
 
-.comment p {
-    font-size: 13px;
-    font-weight: 500;
+.top .icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
     color: var(--text-secondary);
 }
 
-.comment small {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--error-color);
+.bottom {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.presenceSection .avatar {
-    width: 40px;
-    height: 40px;
+.bottom > button {
+    padding: 2px 4px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(128, 128, 128, 0.856);
+    cursor: pointer;
+    transition: ease 0.3s color;
+}
+
+.bottom > button:hover {
+    color: var(--primary-color);
+}
+
+.bottom > button.active {
+    color: var(--primary-color);
+}
+
+.utilityTools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.iconContainer {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
+    border: 1px solid #ccc;
 }
 
-.presenceSection p {
+.iconContainer .icon {
+    width: 16px;
+    height: 16px;
+    color: var(--text-secondary);
+}
+
+.iconContainer:hover {
+    background: #dddddd2f;
+}
+
+.shareButton {
+    outline: none;
+    border: none;
+    width: 80px;
+    font-size: 13px;
+    background: #2575FC;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 4px;
+    border-radius: 15px;
+}
+
+.shareButton .icon {
+    width: 14px;
+    height: 14px;
+}
+
+.profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userActive {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4CAF50;
+}
+
+.bottomHeaderNav {
+    background: #ededed;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.61);
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bottomHeaderNav > div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.iconButton {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    /* border: #ccc 1px solid; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgba(0, 0, 0, 0.062); */
+}
+
+.iconButton img {
+    width: 16px;
+    height: 16px;
+}
+
+.iconButton .icon {
+    width: 20px;
+    height: 20px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    /* color: #333333de; */
+}
+
+.iconButton:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.iconButton:hover .icon {
+    color: var(--primary-color);
+}
+
+.fontStyling {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.zoomSize_selector {
+    width: 70px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.411);
+}
+
+.heading_selector {
+    width: 120px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.411);
+}
+
+.font_selector {
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.411);
+}
+
+.increaseFontSize {
+    border: 1px solid #ccc;
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.increaseFontSize > button {
+    outline: none;
+    border: none;
+
+}
+
+.increaseFontSize .fontSize {
+    outline: none;
+    width: 25px;
+    text-align: center;
+    background: transparent;
     font-size: 14px;
-    letter-spacing: 1px;
+    color: var(--text-secondary);
     font-weight: 500;
 }
 
-.presenceSection span {
-    color: var(--info-color);
+.increaseFontSize > button .icon {
+    width: 12px;
+    height: 12px;
+    color: var(--text-secondary);
 }
 
-.presenceSection .viewingStatus {
-    color: var(--warning-color);
-}
-
-.editorContainer {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-.editorToolbar {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-.toolbarMainButtons button, .toolbarOptions button, .toolbarOptions select {
-    margin: 5px;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    background: var(--secondary-color);
-    color: #fff;
-    font-size: 0.9rem;
-    outline: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-.toolbarMainButtons button:hover, .toolbarOptions button:hover, .toolbarOptions select:hover {
-    background: #D9DDE3;
-    color: white;
-}
-
-.fontSelector {
-    padding: 7px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    outline: none;
-    width: 250px;
-    cursor: pointer;
-    border: 2px solid #2575FC;
-}
-
-.toolbarOptions .saveButton {
-    background: var(--success-color);
-    color: white;
-}
-
-.toolbarOptions .saveButton:hover {
-    background: #31a035;
-    color: white;
-}
-
-.toolbarOptions .exportButton {
-    background: var(--warning-color);
-}
-
-.toolbarOptions .exportButton:hover {
-    background: #f8be10;
-    color: white;
-}
-
-.editorWrapper {
-    display: flex;
+.colorWrapper {
     position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 }
 
-.horizontalRuler {
+.colorPicker {
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 40px;
-    height: 30px;
-    background: #f7f7f7;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    font-size: 10px;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-
-.horizontalRuler .startMarker, .horizontalRuler .endMarker {
-    position: absolute;
-    top: 0;
-    width: 3px;
-    cursor: ew-resize;
-    height: 60%;
-    background: #666666a8;
-    z-index: 20;
-}
-
-.horizontalRuler .startMarker {
-    left: 0;
-}
-
-.horizontalRuler .endMarker {
-    right: 0;
-}
-
-.verticalRuler .startMarker, .verticalRuler .endMarker {
-    position: absolute;
-    left: 0;
-    width: 60%;
-    height: 3px;
-    background: #666666a8;
-    cursor: ns-resize;
-    z-index: 20;
-}
-
-.verticalRuler .startMarker {
-    top: 0;
-}
-
-.verticalRuler .endMarker {
-    bottom: 0;
-}
-
-.horizontalRuler .ticks {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.horizontalRuler .ticks div {
-    position: relative;
-    width: 50px;
-    text-align: center;
-    font-size: 10px;
-    color: #666;
-}
-
-.horizontalRuler .ticks div::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 10px;
-    background: #666;
-}
-
-.verticalRuler {
-    position: absolute;
-    top: 30px; /* Leave space for the horizontal ruler */
-    left: 0;
-    bottom: 0;
-    width: 30px;
-    background: #f0f0f0;
-    border-right: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 10px;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-
-.verticalRuler .ticks {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-}
-
-.verticalRuler .ticks div {
-    position: relative;
-    height: 50px; /* Distance between ticks*/
-    text-align: center;
-    font-size: 10px;
-    color: #666;
-}
-
-.verticalRuler .ticks div::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 1px;
-    background: #666;
-}
-
-.editor {
-    margin: 30px 0 0 40px;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
-    background: #fafafa;
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-    max-height: 100%;
-    max-width: 100%;
-    position: relative;
-}
-
-.editorPages {
-    padding: 50px;
-    width: 794px;
-    height: 1123px;
-    margin: 20px auto;
-    outline: none;
-    overflow: hidden;
-    position: relative;
+    top: 70px;
+    left: -30px;
+    z-index: 10;
     background: white;
-    direction: ltr;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.082);
-    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.editorPages:empty::before {
-    content: "Start typing your document here....";
-    color: #aaa;
-    font: italic;
-    pointer-events: none;
+.colorPickerButton {
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    border-radius: 5px;
 }
 
-.editorContent {
-    width: calc(100% - 100px);
-    height: calc(100% - 100px);
-    overflow-y: auto;
-    box-sizing: border-box;
-    font-size: 16px;
-    line-height: 1.6;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    color: var(--text-primary);
+.colorPickerButton span {
+    font-weight: bold;
+    color: var(--text-secondary);
+    font-size: 15px;
 }
 
-.editor:focus {
-    outline: 2px solid #4a90e2;
-    /* border-color: #5c5cff; */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.colorBackground {
+    position: relative;
 }
 
-.editor::-webkit-scrollbar {
-    width: 8px;
+.colorBackgroundButton {
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    border-radius: 5px;
+    background: white;
+    color: #333333;
 }
 
-.editor::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
+.colorBackgroundButton span {
+    font-weight: bold;
+    color: var(--text-secondary);
+    font-size: 15px;
 }
 
-.editor::-webkit-scrollbar-thumb:hover {
-    background: #aaa;
+.backgroundColorPicker {
+    position: absolute;
+    top: 70px;
+    left: -80px;
+    z-index: 10;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.editor p {
-    font-size: 14px;
-    color: var(--text-primary);
+.main {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 120px;
+    border: 1px solid blue;
+    /* padding-top: 120px; */
 }
